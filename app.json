@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Farm Management BD",
+    "slug": "farm-management-bd",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F4FFF7"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.farmmanagement.bd.app"
+    },
+    "android": {
+      "package": "com.farmmanagement.bd.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo.png",
+        "backgroundColor": "#F4FFF7"
+      }
+    }
+  }
+}
