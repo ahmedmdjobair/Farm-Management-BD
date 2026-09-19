@@ -3,6 +3,7 @@ import {
   Alert,
   BackHandler,
   Image,
+  ImageBackground,
   Modal,
   SafeAreaView,
   ScrollView,
@@ -19,6 +20,10 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as ImagePicker from "expo-image-picker";
 
 const STORAGE_KEY = "farm_management_bd_v3";
+
+const WELCOME_BACKGROUND = require("./assets/welcome-background.png");
+const FARM_LIST_BACKGROUND = require("./assets/farm-list-background.png");
+const DASHBOARD_BACKGROUND = require("./assets/dashboard-background.png");
 
 const GREEN = "#087B43";
 const DARK_GREEN = "#075B35";
@@ -916,7 +921,10 @@ Test OTP: ${code}`
     children,
   }) => {
     return (
-      <SafeAreaView style={styles.safe}>
+      <ImageBackground
+        source={DASHBOARD_BACKGROUND}
+        style={styles.safe}
+      >
         <StatusBar style="light" />
 
         <Header
@@ -933,7 +941,7 @@ Test OTP: ${code}`
         </ScrollView>
 
         <BottomNav active={tab} />
-      </SafeAreaView>
+      </ImageBackground>
     );
   };
 
@@ -1072,7 +1080,10 @@ Test OTP: ${code}`
 
   if (screen === "welcome") {
     return (
-      <SafeAreaView style={styles.safe}>
+      <ImageBackground
+        source={WELCOME_BACKGROUND}
+        style={styles.safe}
+      >
         <StatusBar style="dark" />
 
         <ScrollView
@@ -1129,7 +1140,7 @@ Test OTP: ${code}`
             }}
           />
         </ScrollView>
-      </SafeAreaView>
+      </ImageBackground>
     );
   }
 
@@ -1340,7 +1351,10 @@ Test OTP: ${code}`
 
   if (screen === "farmList") {
     return (
-      <SafeAreaView style={styles.safe}>
+      <ImageBackground
+        source={FARM_LIST_BACKGROUND}
+        style={styles.safe}
+      >
         <StatusBar style="light" />
 
         <Header
@@ -1454,7 +1468,7 @@ Test OTP: ${code}`
             }}
           />
         </ScrollView>
-      </SafeAreaView>
+      </ImageBackground>
     );
   }
 
@@ -2380,7 +2394,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 24,
-    backgroundColor: "#F3FFF7",
+    backgroundColor: "rgba(243, 255, 247, 0.86)",
   },
 
   logo: {
@@ -2567,7 +2581,7 @@ const styles = StyleSheet.create({
   farmListContent: {
     padding: 16,
     paddingBottom: 40,
-    backgroundColor: BG,
+    backgroundColor: "rgba(247, 250, 248, 0.88)",
     minHeight: "100%",
   },
 
@@ -2613,7 +2627,7 @@ const styles = StyleSheet.create({
     padding: 15,
     paddingBottom: 100,
     minHeight: "100%",
-    backgroundColor: BG,
+    backgroundColor: "rgba(247, 250, 248, 0.88)",
   },
 
   statsRow: {
